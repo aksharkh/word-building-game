@@ -3,7 +3,6 @@ import random
 
 def index(request):
     if 'restart' in request.POST:
-        # Restart the game by clearing session data
         request.session.flush()
         return redirect('index')
 

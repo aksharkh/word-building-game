@@ -27,7 +27,7 @@
     }
 
     window.onload = function () {
-        var fifteenSeconds = 15,
+        var fifteenSeconds = 300,
             display = document.querySelector('#time');
         startTimer(fifteenSeconds, display);
     };
@@ -35,8 +35,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Word Game</h1>
-        <p id="time"></p>
+        <center>
+        <h1>Word Trail</h1>
+        <p style="color:tomato;" id="time"></p>
         {% if message %}
             <p>{{ message }}</p>
             <p>Computer points: {{ cmarks }}</p>
@@ -57,6 +58,7 @@
             <p>Computer points: {{ cmarks }}</p>
             <p>User points: {{ umarks }}</p>
         {% endif %}
+    </center>
     </div>
 </body>
 </html>
